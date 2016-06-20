@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css" />
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.min.js"/>
+
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="bundesLigaApp" >
+
+    <md-toolbar layout="row" layout-align="center end" class="md-thin">
+            <md-button class="md-fab md-fab-top-right" ui-sref="crud">
+                <md-tooltip style="backgroung-color:red;">
+                    <b> This App is also yours. Help us by submitting some infos!! </b>
+                </md-tooltip>
+                Submit
+            </md-button>
+    </md-toolbar>
+
+
+<div ng-cloak="" ng-controller="menuController" class="tabsdemoDynamicHeight">
+
+    <md-content>
+        <md-tabs  md-dynamic-height="" md-border-bottom="" >
+            <md-content class="md-padding mg-warn">
+            <md-tab label="Liga" md-on-select="onTabSelected()" class="md-primary">
+                <div ui-view="liga"></div>
+            </md-tab>
+
+            <md-tab label="Clubs" md-on-select="onTabSelected()">
+                <div ui-view="clubs"></div>
+            </md-tab>
+
+            <md-tab label="News" md-on-select="onTabSelected()">
+                <div ui-view="news"></div>
+            </md-tab>
+
+            </md-content>
+        </md-tabs>
+    </md-content>
+
+</div> 
+    
+
+
+    <div class="container-fluid" ui-view="">
+    </div>
+
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/Chart.js/Chart.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/material-design-lite/material.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/liga.js"></script>
+        <script src="scripts/controllers/team.js"></script>
+        <script src="scripts/services/rest.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

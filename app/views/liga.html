@@ -1,0 +1,18 @@
+
+
+<div class="container" style="width:200px" >
+    <table class="table table-striped">
+      <tbody>
+          <tr ng-repeat="liga in ligas">
+              <td> {{ liga.country }} </td>
+              <td> <a ui-sref="liga.id({ id : {{liga._id }} })">{{ liga.name }} </a></td>
+              <td> {{ liga.division }}    </td>
+          </tr>
+      </tbody>
+    </table>
+    
+</div>
+
+<div>
+   <ui-view></ui-view>
+</div>

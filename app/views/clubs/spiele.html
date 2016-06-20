@@ -1,0 +1,21 @@
+<div>
+<div  ng-repeat="spiel in spiele" class="container-fluid"  >
+    <div class="column">
+        <div style="margin-left:210px;margin-bottom:2px;">
+            <span class="label label-primary">{{ spiel.date | date }}</span>
+        </div>
+
+        <div style="margin-top:2px">
+            <ul  class="pagination" style="width:600px">
+                <li style="width:190px" class="disabled"> <img class="" src="/flags/{{ spiel.A.club.flag }}" class="img-thumbnail" alt="" /> <input  style="width:190px" class="btn btn-info" type="button"  value="{{ spiel.A.club.name }}"> </li>
+                <li style="width:20px" > <input class="btn btn-default" type="button" value="{{ spiel.A.goals }} VS {{ spiel.B.goals }}"></li>
+                <li  style="width:190px" class="disabled"> <input style="width:190px" class="btn btn-danger" type="button" value="{{spiel.B.club.name}}">  <img class="" src="/flags/{{ spiel.B.club.flag }}" class="img-thumbnail" alt="" /> </li>
+                <li role="presentation" class="divider"></li>
+            </ul>
+        </div>
+    </div>
+
+    
+</div>
+
+</div>

@@ -1,0 +1,60 @@
+<div>
+
+<div class="container-fluid" style="background-color:black; border-radius:10px">
+
+    <div class="row" >
+        <div class="col-md-4" >
+            <h4 style="color:#3B78E7;" > 
+                {{ club.name }}
+            </h4>
+                <span style="padding-top:1px;" >
+                    <img src="flags/{{club.flag}}" alt=""/>
+                </span>
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid" style="margin-left:40px;">
+        <md-button class="btn1" ui-sref="clubs.id.data"> Data </md-button>
+        <md-button class="btn1" ui-sref="clubs.id.spiele"> Spiele  </md-button>
+        <md-button class="btn1" ui-sref="clubs.id.news"> News </md-button>
+        <md-button class="btn1" ui-sref="clubs.id.players"> Players </md-button>
+        <md-button class="btn1" ui-sref="clubs.id.statistics"> Statistik </md-button>
+    </div>
+        
+</div>
+
+
+<div class="container-fluid well" 
+    style="background-color : #BDDBBE; margin-top: 10px; border-radius:10px;" 
+    ui-view>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>
+            </th>
+    
+            <th>
+            </th>
+    
+            </tr>
+    
+        </thead>
+    
+        <tbody>
+            <tr ng-repeat="(key, value) in club">
+                <td>
+                    {{ key }}
+                </td>
+            
+                <td>
+                    {{ value }} <a ng-if="keyIsSpiele(key)" ui-sref="clubs.id.spiele({ id : club._id })" target="_blank">Spiele</a>
+                </td>
+            </tr>
+    
+        </tbody>
+    </table>
+</div>
+
+</div>

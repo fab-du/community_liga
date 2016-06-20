@@ -1,0 +1,26 @@
+
+<div>
+    <h4>Alle Infos Ueber Ihre herzlich beliebte Club </h4>
+    <div  class="col-md-9 well container-fluid" ui-view>
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>title</th>
+                    <th>Inhalt</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr class="sibling" ng-repeat="( key, value ) in news">
+                    <td>{{ value._id }}</td>
+                    <td>
+                        <a href ui-sref="news.id({ id: key })">
+                            {{ value.title }}
+                        </a>
+                    </td>
+                    <td>{{ value.news }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

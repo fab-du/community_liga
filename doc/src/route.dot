@@ -1,0 +1,19 @@
+
+digrap G {
+
+main
+
+main -> liga
+
+liga -> bundeslisga
+bundeslisga -> Division1
+bundeslisga -> Division2
+
+Division1 -> Team
+Team -> Geschischte
+Team -> Statistik
+
+Division1 -> Ranking
+Division1 -> Tage
+
+}
